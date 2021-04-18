@@ -33,27 +33,27 @@ function loadData() {
     const types = [
       {
         name: '玄幻魔法',
-        url: 'https://www.yanqing-888.net/xiaoshuo3/'
+        url: 'http://www.yq-888.com/xiaoshuo3/'
       },
       {
         name: '武侠修真',
-        url: 'https://www.yanqing-888.net/xiaoshuo2/'
+        url: 'http://www.yq-888.com/xiaoshuo2/'
       },
       {
         name: '历史军事',
-        url: 'https://www.yanqing-888.net/xiaoshuo4/'
+        url: 'http://www.yq-888.com/xiaoshuo4/'
       },
       {
         name: '恐怖悬疑',
-        url: 'https://www.yanqing-888.net/xiaoshuo5/'
+        url: 'http://www.yq-888.com/xiaoshuo5/'
       },
       {
         name: '网友动漫',
-        url: 'https://www.yanqing-888.net/xiaoshuo6/'
+        url: 'http://www.yq-888.com/xiaoshuo6/'
       },
       {
         name: '科幻小说',
-        url: 'https://www.yanqing-888.net/xiaoshuo7/'
+        url: 'http://www.yq-888.com/xiaoshuo7/'
       }
     ];
     BookCategory.insertMany(types)
@@ -125,7 +125,7 @@ function loadBook({ url, id }, isFirst = true) {
           const book = {};
           book.title = $(this).find('.s2 a').text();
           book.url =
-            'https://www.yanqing-888.net' + $(this).find('.s2 a').attr('href');
+            'http://www.yq-888.com' + $(this).find('.s2 a').attr('href');
           book.author = $(this).find('.s4').text();
           // console.log(book);
           book.category = id;
@@ -139,7 +139,7 @@ function loadBook({ url, id }, isFirst = true) {
             const book = {};
             book.title = $(this).find('.s2 a').text();
             book.url =
-              'https://www.yanqing-888.net' +
+              'http://www.yq-888.com' +
               $(this).find('.s2 a').attr('href');
             book.author = $(this).find('.s4 a').text();
             book.category = id;
@@ -161,7 +161,7 @@ function loadBook({ url, id }, isFirst = true) {
       if (nextpage) {
         if (nextpage.split('_').splice(-1)[0].replace('/', '') * 1 < 15) {
           loadBook(
-            { url: 'https://www.yanqing-888.net' + nextpage, id },
+            { url: 'http://www.yq-888.com' + nextpage, id },
             false
           );
         }
@@ -185,7 +185,7 @@ function loadZJ(book) {
       if (imgSrc.startsWith('http')) {
         book.coverImg = imgSrc;
       } else {
-        book.coverImg = 'https://www.yanqing-888.net' + imgSrc;
+        book.coverImg = 'http://www.yq-888.com' + imgSrc;
       }
 
       book.descriptions = $('#intro p').eq(0).text();
