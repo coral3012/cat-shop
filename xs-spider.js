@@ -195,7 +195,7 @@ function loadZJ(book) {
       $allZJ.each(function () {
         const zj = {};
         zj.title = $(this).text();
-        zj.url = 'https://www.yanqing-888.net' + $(this).attr('href');
+        zj.url = 'http://www.yq-888.com' + $(this).attr('href');
         zj.book = book.id;
         allZJ.push(zj);
       });
